@@ -1,0 +1,183 @@
+h2 {
+	font-size: 16px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+/**HEADER**/
+header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	border: 1px solid;
+}
+
+#header a {
+	display: block;
+}
+
+.logo {
+	width: 50%;
+}
+
+.menu_1 {
+	width: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.titre {
+	width: 100%;
+}
+
+/**CONTENU**/
+#content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/**CONTENU HBGT**/
+#hbgt {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 60%;
+	border: 1px solid;
+}
+
+#hbgt h1 {
+	width: 100%;
+}
+
+#hbgt article {
+	width: 30%;
+}
+
+#hbgt article img {
+	max-width: 100%;
+	height: auto;
+}
+
+#hbgt button {
+	width: 100%;
+}
+
+/**CONTENU FAV**/
+#fav {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 35%;
+	border: 1px solid;
+}
+
+#fav article {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#fav article div img {
+	max-height: 100%;
+	width: auto;
+}
+
+.fav_img {
+	min-width: 35%;
+}
+.fav_descr {
+	max-width: 60%;
+}
+
+/**CONTENU ACT**/
+#act {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 100%;
+}
+
+#act article {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+
+.act_full {
+	height: 100%;
+}
+
+.act_2_3 {
+	height: 60%;
+}
+
+.act_1_3 {
+	height: 30%;
+}
+
+.act_half {
+	height: 45%;
+}
+
+/**FOOTER**/
+footer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col_foot {
+	flex-direction: column;
+	width: 25%;
+}
+.col_foot a {
+	display: block;
+}
+
+/**@media screen and (max-width: 1024px) and (min-width: 600px) {
+}**/
+
+@media screen and (max-width: 600px) {
+	/**HEADER**/
+	header a:first-child {
+		order: -2;
+		width: 70%;
+	}
+
+	header a:nth-child(4) {
+		width: 30%;
+		text-align: center;
+		order: -1;
+	}
+
+	/**CONTENT**/
+
+	#content {
+		flex-direction: column;
+		width: 100%;
+		border: 1px solid;
+	}
+
+	#content section:nth-child(2) {
+		order: -1;
+	}
+
+	#fav {
+		width: 100%;
+	}
+
+	#hbgt {
+		width: 100%;
+		flex-direction: column;
+		max-height: 100%;
+		width: auto;
+	}
+
+	#act {
+		width: 100%;
+	}
+}
