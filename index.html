@@ -1,19 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/1621ab57f4.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Reservia - Trouvez votre hébergement en ligne</title>
 </head>
 <body>
     <!-- HEADER -->
     <header>
-        <div class="logo"></div>
+        <div class="logo">
+            <img src="contenu/images/logo/reservia.svg" alt="Reservia">
+        </div>
         <div class="menu_1"></div>
-        <div class="menu_2"></div>
-        <div class="titre"></div>
-        <div class="filtres"></div>
+            <a href="#">Hébergements</a>
+            <a href="#">Activités</a>
+        <div class="menu_2">
+            <a href="#">S'inscrire</a>
+        </div>
+        <div class="titre">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre ville ou en pleine nature</p>
+        </div>
+        <div class="recherche">
+            <form action="#" method="post">
+                <button><i class="fas fa-map-marker-alt"></i>></button>
+                <input type="text" name="loc" placeholder="Où est-ce qu'on part?">
+                <input type="submit" value="Rechercher">
+            </form>
+            <div class="filtres">
+                <p>Filtres</p>
+                <button>
+                    <i class="fas fa-money-bill-wave"></i>
+                    <p>économique</p>
+                </button>
+                <button>
+                    <i class="fas fa-child"></i>
+                    <p>Familial</p>
+                </button>
+                <button>
+                    <i class="fas fa-heart"></i>
+                    <p>Romantique</p>
+                </button>
+                <button>
+                    <i class="fas fa-dog"></i>
+                    <p>Animaux autorisés</p>
+                </button>
+            </div>
+            <div class="info">
+                <i class="fas fa-info"></i>
+                <q>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </div>
     </header>
     <!-- CONTENU-->
     <div id="content">
