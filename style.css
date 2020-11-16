@@ -61,7 +61,7 @@ header a {
 	border: none;
 	display: block;
 	font-size: 16px;
-	border-top: 5px white solid;
+	border-top: 5px #f2f2f2 solid;
 }
 
 header a:hover {
@@ -70,22 +70,17 @@ header a:hover {
 }
 
 .head_40 {
-	width: 40%;
+	width: 53%;
 }
 
-.head_25,
 .head_50 {
 	display: flex;
-	text-align: center;
-	justify-content: flex-end;
-}
-
-.head_50 {
-	width: 40%;
+	flex-flow: wrap;
+	width: 30%;
 }
 
 .head_25 {
-	width: 10%;
+	width: 15%;
 }
 
 .sign_in a {
@@ -93,9 +88,16 @@ header a:hover {
 	font-weight: bold;
 }
 
-.head_25 a,
+.head_25 a {
+	width: 100%;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+}
+
 .head_50 a {
-	padding: 30px;
+	width: 50%;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
 }
 /* Eléments globaux Titre site et Barre de recherche */
 
@@ -123,7 +125,7 @@ form {
 }
 .recherche i {
 	padding: 10px;
-	padding-left: 15px;
+	padding-left: 10px;
 	text-align: center;
 }
 
@@ -419,10 +421,6 @@ footer {
 		width: 19%;
 	}
 
-	.head_50 a {
-		width: 100%;
-	}
-
 	#hbgt,
 	#act {
 		width: 98%;
@@ -508,8 +506,6 @@ footer {
 	}
 
 	.head_50 a {
-		padding: 20px;
-		width: 100%;
 		border: none;
 		border-bottom: 5px #f2f2f2 solid;
 	}
