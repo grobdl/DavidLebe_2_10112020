@@ -1,10 +1,12 @@
+/* {
+	border: 1px solid;
+}*/
+
+/*Propriétés s'appliquant sur l'ensemble de la page*/
 @font-face {
 	font-family: 'Raleway';
 	src: url('contenu/fonts/Raleway-Regular.ttf') format('truetype');
 }
-/* {
-	border: 1px solid;
-}*/
 
 body {
 	font-family: 'Raleway', sans-serif;
@@ -17,11 +19,16 @@ h1 {
 	width: 95%;
 	font-size: 24px;
 	margin: 0px;
-	padding: 1%;
 }
 
 h2 {
-	font-size: 14px;
+	font-size: 24px;
+	width: 98%;
+}
+
+h3 {
+	font-size: 16px;
+	margin: 0px;
 }
 
 a {
@@ -38,6 +45,7 @@ a {
 }
 
 /**HEADER**/
+/* Navigation */
 header {
 	display: flex;
 	flex-wrap: wrap;
@@ -63,7 +71,6 @@ header a:hover {
 
 .head_40 {
 	width: 40%;
-	flex-grow: 1;
 }
 
 .head_25,
@@ -90,9 +97,7 @@ header a:hover {
 .head_50 a {
 	padding: 30px;
 }
-.titre {
-	width: 100%;
-}
+/* Eléments globaux Titre site et Barre de recherche */
 
 .titre,
 .recherche,
@@ -106,16 +111,15 @@ header a:hover {
 	align-items: center;
 }
 
+/* Barre de recherche */
+
 .recherche {
 	justify-content: flex-start;
 }
 form {
-	display: inline-block;
 	background: #f2f2f2;
 	border-radius: 15px;
 	border: 1px solid #f2f2f2;
-	width: auto;
-	overflow: hidden;
 }
 .recherche i {
 	padding: 10px;
@@ -141,6 +145,8 @@ form {
 .recherche input[type='submit']:hover {
 	border: 2px solid #deebff;
 }
+
+/* Filtres recherche */
 
 .filtres button {
 	display: block;
@@ -170,9 +176,9 @@ form {
 	color: #0065fc;
 }
 
-.filtres p {
-	padding-left: 5px;
-	padding-right: 5px;
+.filtres span {
+	display: inline-block;
+	padding: 0px 10px 0px 5px;
 	font-weight: bold;
 	text-transform: capitalize;
 	text-align: left;
@@ -190,11 +196,10 @@ i.fa-info {
 }
 
 /**CONTENU**/
-#content h1 {
-	padding-left: 1%;
-}
 
-#content {
+/* Blocs de disposition contenu */
+
+#content /*Bloc contenant les 3 sections*/ {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -204,20 +209,11 @@ i.fa-info {
 section {
 	background: #f2f2f2;
 	border-radius: 30px;
+	display: flex;
+	flex-flow: wrap column;
 	justify-content: space-between;
 	padding: 1%;
 	margin: 1% 0% 1% 0%;
-}
-
-article {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	background: white;
-	border: 5px white solid;
-	box-shadow: 5px 5px 5px gainsboro;
-	border-radius: 30px;
-	overflow: hidden;
 }
 
 section button {
@@ -228,69 +224,11 @@ section button {
 	padding: 15px 0px 0px 15px;
 }
 
-.descr {
-	display: flex;
-	flex-flow: column wrap;
-	padding: 5px 0px 0px 9px;
-	width: 95%;
-}
-
-.descr h2,
-.descr p {
-	font-size: 20px;
-	padding: 0px 5px 0px 5px;
-	margin: 0px;
-}
-
-.descr div {
-	flex-grow: 2;
-	display: flex;
-	flex-flow: wrap;
-	align-items: flex-end;
-}
+/*Section Hébergement */
 
 #hbgt {
-	display: flex;
-	flex-wrap: wrap;
+	flex-flow: wrap row;
 	width: 65%;
-}
-
-#fav {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-items: center;
-	width: 30%;
-}
-
-#activites {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	background: none;
-	justify-content: space-between;
-	width: 100%;
-}
-
-.c_lg_60_40 {
-	background: white;
-	position: relative;
-	margin-top: 1%;
-	margin-bottom: 1%;
-	border: white 5px solid;
-	overflow: hidden;
-}
-
-.c_lg_60_40 img {
-	position: absolute;
-	top: 0px;
-	width: 100%;
-}
-
-.c_lg_60_40 .descr {
-	background: white;
-	position: absolute;
-	width: 100%;
 }
 
 #hbgt article {
@@ -301,46 +239,22 @@ section button {
 	width: 100%;
 }
 
-#hbgt article {
-	height: 230px;
+/*Section Favoris */
+
+#fav {
+	align-items: center;
+	width: 30%;
 }
 
-#hbgt .c_lg_60_40 img {
-	height: 70%;
-}
-
-#hbgt .c_lg_60_40 .descr {
-	height: 70px;
-	top: 146px;
-}
-
-/**CONTENU FAV**/
-.fav {
+#fav article {
 	width: 95%;
-	height: 150px;
-	justify-content: flex-start;
 }
 
-.fav a {
-	display: flex;
-	flex-flow: wrap;
-}
+/*Section Activités */
 
-.fav .img {
-	width: 150px;
-	max-width: 40%;
-	height: 150px;
-	overflow: hidden;
-}
-
-.img img {
-	width: auto;
-	height: 100%;
-}
-
-.fav .descr {
-	max-width: 50%;
-	text-align: left;
+#activites {
+	background: none;
+	width: 100%;
 }
 
 #act {
@@ -355,6 +269,90 @@ section button {
 	width: 24%;
 	border: none;
 }
+
+/* Contenu des sections */
+
+article {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background: white;
+	border: 5px white solid;
+	box-shadow: 5px 5px 5px gainsboro;
+	border-radius: 30px;
+	overflow: hidden;
+	position: relative;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+article img {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+}
+
+article .descr {
+}
+
+.descr /* Description des articles */ {
+	position: absolute;
+	background: white;
+	width: 96%;
+	display: flex;
+	flex-flow: column wrap;
+	padding: 1% 1% 0% 3%;
+}
+
+.descr h3,
+.descr p,
+.descr .note {
+	font-size: 16px;
+	margin: 0px;
+}
+
+.descr div {
+	flex-grow: 2;
+	display: flex;
+	flex-flow: wrap;
+	align-items: flex-end;
+}
+
+/*Contenu article spécial Hébergement*/
+
+#hbgt article {
+	height: 230px;
+}
+
+#hbgt article img {
+	height: 70%;
+}
+
+#hbgt article .descr {
+	height: 70px;
+	top: 146px;
+}
+
+/*Contenu article spécial Favoris*/
+
+#fav article {
+	height: 150px;
+	flex-flow: wrap row;
+}
+
+#fav article img {
+	height: 150px;
+	width: 150px;
+}
+
+#fav article .descr {
+	width: 45%;
+	height: 80%;
+	left: 150px;
+	padding: 15px 5px 0px 5px;
+}
+
+/*Contenu article spécial Favoris*/
 
 .act_full {
 	height: 100%;
@@ -372,11 +370,11 @@ section button {
 	height: 42%;
 }
 
-#act .c_lg_60_40 img {
+#act article img {
 	height: 90%;
 }
 
-#act .c_lg_60_40 .descr {
+#act article .descr {
 	height: 50px;
 	bottom: 0px;
 }
@@ -395,68 +393,67 @@ footer {
 	width: 25%;
 	padding: 1%;
 }
+
 .col_foot a {
 	display: block;
-	padding: 2px;
+	padding: 5px;
 }
 
 /** TABLET **/
 
 @media screen and (max-width: 1024px) and (min-width: 600px) {
-	#content {
-		flex-direction: column;
-	}
-
-	#fav,
 	#hbgt,
-	#activites,
 	#act {
 		width: 98%;
+	}
+
+	#activites,
+	#fav {
+		width: 47%;
 	}
 
 	#fav article {
 		margin: 5px 0px 5px 0px;
 	}
 
-	#content section:nth-child(2) {
-		order: -1;
+	/*Modification des proportions du contenu */
+	/*Hébergement*/
+
+	/*Favoris*/
+
+	#fav article {
+		flex-flow: wrap column;
+		height: 200px;
 	}
 
-	.head_40 {
-		width: 98%;
-	}
-
-	.head_50 {
-		width: 59%;
-	}
-
-	.head_25 {
-		width: 39%;
-		justify-content: flex-start;
-	}
-
-	#hbgt article {
-		width: 45%;
-		height: 250px;
-	}
-
-	#hbgt .c_lg_60_40 img {
+	#fav article img {
+		width: 100%;
 		height: 80%;
 	}
 
-	#hbgt .c_lg_60_40 .descr {
-		height: 80px;
-		bottom: 0px;
+	#fav article .descr {
+		width: 100%;
+		left: 0px;
+		height: auto;
+		bottom: 10px;
 	}
 
+	/*activités*/
 	#act {
 		height: 700px;
 		align-content: space-around;
 	}
 
 	#act article {
-		width: 45%;
-		height: 30%;
+		width: 98%;
+		height: 15%;
+	}
+
+	#act article .descr {
+		width: 100%;
+		left: 0px;
+		height: 25%;
+		bottom: 10px;
 	}
 }
 
@@ -464,7 +461,7 @@ footer {
 
 @media screen and (max-width: 600px) {
 	body {
-		min-width: 340px;
+		min-width: 320px;
 	}
 
 	/**HEADER**/
