@@ -423,9 +423,10 @@ footer {
 	padding: 1%;
 }
 
-.col_foot a {
+.col_foot a,
+.col_foot h3 {
 	display: block;
-	padding: 5px;
+	padding: 1%;
 }
 
 /* TABLET */
@@ -469,7 +470,8 @@ footer {
 
 	#fav article img {
 		width: 100%;
-		height: 80%;
+		height: auto;
+		max-height: 80%;
 	}
 
 	#fav article .descr {
@@ -570,9 +572,6 @@ footer {
 	section {
 		width: 98%;
 	}
-	article {
-		width: 98%;
-	}
 
 	#fav article {
 		margin: 1% 0% 1% 0%;
@@ -582,21 +581,16 @@ footer {
 		height: 1300px;
 	}
 
-	#act article {
-		height: 15%;
-	}
-
 	#hebergement {
 		flex-direction: column;
-		width: auto;
 	}
 
 	#hebergement article {
-		width: 98%;
+		width: 96%;
 	}
 
 	#act article {
-		width: 98%;
+		height: 15%;
 		height: 200px;
 	}
 	/**FOOTER**/
