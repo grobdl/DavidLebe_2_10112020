@@ -222,8 +222,8 @@ section {
 	display: flex;
 	flex-flow: wrap column;
 	justify-content: space-between;
-	padding: 1%;
-	margin: 1% 0% 1% 0%;
+	padding: 1% 1% 3% 1%;
+	margin: 1% 0% 0% 0%;
 }
 
 section button {
@@ -295,7 +295,7 @@ article {
 	overflow: hidden;
 	position: relative;
 	margin-top: 1%;
-	margin-bottom: 1%;
+	margin-bottom: 2%;
 }
 
 article img {
@@ -307,7 +307,7 @@ article img {
 .descr /* Description des articles */ {
 	position: absolute;
 	background: white;
-	width: 96%;
+	width: 97%;
 	display: flex;
 	flex-flow: column wrap;
 	padding: 1% 1% 0% 3%;
@@ -355,7 +355,7 @@ article img {
 }
 
 #fav article .descr {
-	width: 45%;
+	width: auto;
 	height: 80%;
 	left: 150px;
 	padding: 15px 5px 0px 5px;
@@ -364,19 +364,19 @@ article img {
 /*Contenu article spécial Favoris*/
 
 .act_full {
-	height: 100%;
+	height: 98%;
 }
 
 .act_2_3 {
-	height: 55%;
+	height: 50%;
 }
 
 .act_1_3 {
-	height: 31%;
+	height: 30%;
 }
 
 .act_half {
-	height: 42%;
+	height: 40%;
 }
 
 #act article img {
@@ -467,14 +467,14 @@ footer {
 
 	#act article {
 		width: 98%;
-		height: 15%;
+		height: 14%;
 	}
 
 	#act article .descr {
 		width: 100%;
 		left: 0px;
 		height: 25%;
-		bottom: 10px;
+		bottom: 8px;
 	}
 }
 
@@ -545,7 +545,6 @@ footer {
 	#activite,
 	#act {
 		width: 98%;
-		margin: 0%;
 	}
 
 	section {
