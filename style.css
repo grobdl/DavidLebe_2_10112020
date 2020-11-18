@@ -1,4 +1,35 @@
-/* {
+/*Récapitulatif des class et id utilisés:
+	
+	HEADER:
+	.head_40: Barre de navigation, Bloc logo 
+	.head_50: Barre de navigation, Bloc des liens "Hébergements" et "Activités" 
+	.head_25: Barre de navigation, Bloc du lien "s'inscrire"
+	.Titre : Bloc Titre et slogan
+	.Recherche: Bloc recherche de logement
+	.Filtres: Bloc filtres de recherche
+	.Info: Bloc sur le nombre de logements disponibles dans la zone recherchée
+	
+	CONTENU:
+	#Content: Bloc contenant les 3 sections de contenu
+	.section_head: Bloc titre des sections
+	#hebergement: Bloc des hébergements
+	#activites: Bloc section des activités
+	.act: Bloc des articles activités
+	#fav: Bloc des hébergements favoris
+	.descr: Bloc de description des hébergements. Contient l'enseigne, le tarif à la nuit, et la note.
+	.note: Note de l'hébergements
+	.full: Etoile obtenue par l'hébergement
+	.empty: Etoile non obtenue par l'hébergement
+	.act_full: Article prenant l'ensemble de la hauteur de la section .act
+	.act_1_3: Article prenant 1 tiers de la hauteur de la section .act
+	.act_2_3: Article prenant 2 tiers de la hauteur de la section .act
+	.act_half: Article prenant la moitié de la hauteur de la section .act
+	
+	FOOTER:
+	.col_foot: Colonne de liens dans le footer
+*/
+
+/* Cadrage temporaire * {
 	border: 1px solid;
 }*/
 
@@ -36,14 +67,6 @@ a {
 	text-decoration: none;
 }
 
-.full {
-	color: #0065fc;
-}
-
-.empty {
-	color: grey;
-}
-
 /**HEADER**/
 /* Navigation */
 header {
@@ -70,28 +93,15 @@ header a:hover {
 }
 
 .head_40 {
+	/* Barre de navigation, Bloc logo */
 	width: 53%;
 }
 
 .head_50 {
+	/* Barre de navigation, Bloc des liens "Hébergements" et "Activités" */
 	display: flex;
 	flex-flow: wrap;
 	width: 30%;
-}
-
-.head_25 {
-	width: 15%;
-}
-
-.sign_in a {
-	color: #0065fc;
-	font-weight: bold;
-}
-
-.head_25 a {
-	width: 100%;
-	text-align: center;
-	padding: 20px 0px 20px 0px;
 }
 
 .head_50 a {
@@ -99,6 +109,20 @@ header a:hover {
 	text-align: center;
 	padding: 20px 0px 20px 0px;
 }
+
+.head_25 {
+	/* Barre de navigation, Bloc du lien "s'inscrire"*/
+	width: 15%;
+}
+
+.head_25 a {
+	color: #0065fc;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+	padding: 20px 0px 20px 0px;
+}
+
 /* Eléments globaux Titre site et Barre de recherche */
 
 .titre,
@@ -231,12 +255,31 @@ section {
 	margin: 1% 0% 0% 0%;
 }
 
+/* Propriétés sections */
+
 section .section_head {
 	width: 98%;
 	display: flex;
 	flex-flow: wrap;
 	justify-content: space-between;
 	align-items: center;
+}
+
+#hebergement {
+	flex-flow: wrap row;
+	width: 64%;
+	margin-right: 1%;
+}
+
+#activites {
+	background: none;
+	width: 100%;
+}
+
+#fav {
+	align-items: center;
+	width: 28%;
+	margin-right: 2%;
 }
 
 section button {
@@ -253,55 +296,7 @@ section button {
 	padding: 1%;
 }
 
-/*Section Hébergement */
-
-#hebergement {
-	flex-flow: wrap row;
-	width: 64%;
-	margin-right: 1%;
-}
-
-#hebergement article {
-	width: 30%;
-}
-
-#hebergement button {
-	width: 100%;
-}
-
-/*Section Favoris */
-
-#fav {
-	align-items: center;
-	width: 28%;
-	margin-right: 2%;
-}
-
-#fav article {
-	width: 97%;
-}
-
-/*Section Activités */
-
-#activites {
-	background: none;
-	width: 100%;
-}
-
-#act {
-	display: flex;
-	flex-flow: column wrap;
-	justify-content: space-between;
-	height: 400px;
-	width: 100%;
-}
-
-#act article {
-	width: 24%;
-	border: none;
-}
-
-/* Contenu des sections */
+/* Propriétés des articles et contenu des articles */
 
 article {
 	display: flex;
@@ -322,7 +317,7 @@ article img {
 	width: 100%;
 }
 
-.descr /* Description des articles */ {
+.descr {
 	position: absolute;
 	background: white;
 	width: 96%;
@@ -345,7 +340,25 @@ article img {
 	align-items: flex-end;
 }
 
-/*Contenu article spécial Hébergement*/
+/* Notes hôte*/
+
+.full {
+	color: #0065fc;
+}
+
+.empty {
+	color: grey;
+}
+
+/*Section Hébergement */
+
+#hebergement article {
+	width: 30%;
+}
+
+#hebergement button {
+	width: 100%;
+}
 
 #hebergement article {
 	height: 230px;
@@ -360,9 +373,10 @@ article img {
 	top: 146px;
 }
 
-/*Contenu article spécial Favoris*/
+/*Section Favoris */
 
 #fav article {
+	width: 97%;
 	height: 150px;
 	flex-flow: wrap row;
 }
@@ -379,7 +393,25 @@ article img {
 	padding: 15px 5px 0px 5px;
 }
 
-/*Contenu article spécial Favoris*/
+/* Section activités */
+
+#act {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	height: 400px;
+	width: 100%;
+}
+
+#act article {
+	width: 24%;
+	border: none;
+}
+
+#act article .descr {
+	height: 50px;
+	bottom: 0px;
+}
 
 .act_full {
 	height: 98%;
@@ -413,11 +445,6 @@ article img {
 	height: 80%;
 }
 
-#act article .descr {
-	height: 50px;
-	bottom: 0px;
-}
-
 /**FOOTER**/
 footer {
 	display: flex;
@@ -439,9 +466,11 @@ footer {
 	padding: 1%;
 }
 
-/* TABLET */
+/* TABLET Entre 1024 et 600px*/
 
 @media screen and (max-width: 1024px) and (min-width: 600px) {
+	/* Header, redisposition du menu de navigation */
+
 	.head_40 {
 		width: 29%;
 	}
@@ -454,7 +483,7 @@ footer {
 		width: 19%;
 	}
 
-	/*Modification des proportions du contenu */
+	/*Modification des proportions des sections */
 	/*Global*/
 
 	section {
@@ -472,8 +501,9 @@ footer {
 		width: 47%;
 	}
 
-	/*Hébergement*/
-	/*Favoris*/
+	/* Modifications des propriétés des articles */
+
+	/* Favoris */
 
 	#fav article {
 		margin: 5px 0px 5px 0px;
@@ -494,7 +524,8 @@ footer {
 		bottom: 10px;
 	}
 
-	/*activités*/
+	/* Activités */
+
 	#act {
 		height: 700px;
 		align-content: space-around;
@@ -513,14 +544,16 @@ footer {
 	}
 }
 
-/** TEL **/
+/** Smartphones, Moins de 600px **/
 
 @media screen and (max-width: 600px) {
 	body {
 		min-width: 320px;
 	}
 
-	/**HEADER**/
+	/** Propriétés Header **/
+	/* Ordre bloc de navigation */
+
 	header div:first-child {
 		order: -2;
 		width: 70%;
@@ -531,6 +564,8 @@ footer {
 		text-align: center;
 		order: -1;
 	}
+
+	/* Propriétés des blocs de navigation*/
 
 	header a:hover {
 		color: #0065fc;
@@ -559,11 +594,13 @@ footer {
 		width: 20%;
 	}
 
+	/* Barre de recherche */
+
 	.recherche {
 		justify-content: center;
 	}
 
-	/**CONTENT**/
+	/** Contenu **/
 
 	#content {
 		flex-direction: column;
@@ -571,15 +608,10 @@ footer {
 		width: 98%;
 	}
 
+	/* Ordre et propriétés des sections */
+
 	#content section:nth-child(2) {
 		order: -1;
-	}
-
-	#fav,
-	#hebergement,
-	#activite,
-	#act {
-		width: 98%;
 	}
 
 	section {
@@ -587,16 +619,19 @@ footer {
 		margin: 2% 0% 2% 0%;
 	}
 
-	#fav article {
-		width: 95%;
+	#hebergement {
+		flex-direction: column;
 	}
 
 	#act {
+		width: 98%;
 		height: 1300px;
 	}
 
-	#hebergement {
-		flex-direction: column;
+	/* Propriétés des articles */
+
+	#fav article {
+		width: 95%;
 	}
 
 	#hebergement article {
@@ -607,7 +642,8 @@ footer {
 		height: 15%;
 		width: 98%;
 	}
-	/**FOOTER**/
+
+	/** Footer **/
 	footer {
 		flex-direction: column;
 	}
