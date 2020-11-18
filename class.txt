@@ -27,3 +27,5 @@ Récapitulatif des class et id utilisés:
 	
 	FOOTER:
 	.col_foot: Colonne de liens dans le footer
+
+FIN RECAP
