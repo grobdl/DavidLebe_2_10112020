@@ -1,0 +1,29 @@
+Récapitulatif des class et id utilisés:
+	
+	HEADER:
+	.head_40: Barre de navigation, Bloc logo */
+	.head_50: Barre de navigation, Bloc des liens "Hébergements" et "Activités" */
+	.head_25: Barre de navigation, Bloc du lien "s'inscrire"*/
+	.Titre : Bloc Titre et slogan
+	.Recherche: Bloc recherche de logement
+	.Filtres: Bloc filtres de recherche
+	.Info: Bloc sur le nombre de logements disponibles dans la zone recherchée
+	
+	CONTENU:
+	#Content: Bloc contenant les 3 sections de contenu
+	.section_head: Bloc titre des sections
+	#hebergement: Bloc des hébergements
+	#activites: Bloc section des activités
+	.act: Bloc des articles activités
+	#fav: Bloc des hébergements favoris
+	.descr: Bloc de description des hébergements. Contient l'enseigne, le tarif à la nuit, et la note.
+	.note: Note de l'hébergements
+	.full: Etoile obtenue par l'hébergement
+	.empty: Etoile non obtenue par l'hébergement
+	.act_full: Article prenant l'ensemble de la hauteur de la section .act
+	.act_1_3: Article prenant 1 tiers de la hauteur de la section .act
+	.act_2_3: Article prenant 2 tiers de la hauteur de la section .act
+	.act_half: Article prenant la moitié de la hauteur de la section .act
+	
+	FOOTER:
+	.col_foot: Colonne de liens dans le footer
