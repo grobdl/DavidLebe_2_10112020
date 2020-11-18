@@ -24,7 +24,6 @@ h1 {
 h2 {
 	font-size: 24px;
 	font-weight: 20px;
-	width: 98%;
 }
 
 h3 {
@@ -232,6 +231,14 @@ section {
 	margin: 1% 0% 0% 0%;
 }
 
+section .section_head {
+	width: 98%;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
 section button {
 	border-radius: 30px;
 	background: #f2f2f2;
@@ -240,6 +247,10 @@ section button {
 	font-weight: bold;
 	font-size: 16px;
 	padding: 15px 0px 0px 15px;
+}
+
+.section_head i {
+	padding: 1%;
 }
 
 /*Section Hébergement */
@@ -267,7 +278,7 @@ section button {
 }
 
 #fav article {
-	width: 95%;
+	width: 97%;
 }
 
 /*Section Activités */
@@ -302,8 +313,7 @@ article {
 	border-radius: 30px;
 	overflow: hidden;
 	position: relative;
-	margin-top: 1%;
-	margin-bottom: 2%;
+	margin: 1% 0% 2% 0%;
 }
 
 article img {
@@ -444,6 +454,14 @@ footer {
 		width: 19%;
 	}
 
+	/*Modification des proportions du contenu */
+	/*Global*/
+
+	section {
+		width: 98%;
+		margin: 2% 0% 2% 0%;
+	}
+
 	#hebergement,
 	#act {
 		width: 98%;
@@ -454,16 +472,11 @@ footer {
 		width: 47%;
 	}
 
-	#fav article {
-		margin: 5px 0px 5px 0px;
-	}
-
-	/*Modification des proportions du contenu */
 	/*Hébergement*/
-
 	/*Favoris*/
 
 	#fav article {
+		margin: 5px 0px 5px 0px;
 		flex-flow: wrap column;
 		height: 200px;
 	}
@@ -571,10 +584,11 @@ footer {
 
 	section {
 		width: 98%;
+		margin: 2% 0% 2% 0%;
 	}
 
 	#fav article {
-		margin: 1% 0% 1% 0%;
+		width: 95%;
 	}
 
 	#act {
