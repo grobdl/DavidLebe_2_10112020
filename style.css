@@ -16,6 +16,7 @@
 	#activites: Bloc section des activités
 	.act: Bloc des articles activités
 	#fav: Bloc des hébergements favoris
+	.img: Bloc contenant les images des articles.
 	.descr: Bloc de description des hébergements. Contient l'enseigne, le tarif à la nuit, et la note.
 	.note: Note de l'hébergements
 	.full: Etoile obtenue par l'hébergement
@@ -54,7 +55,7 @@ h1 {
 
 h2 {
 	font-size: 24px;
-	font-weight: 20px;
+	font-weight: bold;
 }
 
 h3 {
@@ -63,6 +64,7 @@ h3 {
 }
 
 a {
+	display: block;
 	color: black;
 	text-decoration: none;
 }
@@ -82,9 +84,8 @@ header p {
 
 header a {
 	border: none;
-	display: block;
 	font-size: 16px;
-	border-top: 5px #f2f2f2 solid;
+	border-top: 5px white solid;
 }
 
 header a:hover {
@@ -138,40 +139,54 @@ header a:hover {
 }
 
 /* Barre de recherche */
-
-.recherche {
-	justify-content: flex-start;
-}
 form {
-	background: #f2f2f2;
-	border-radius: 15px;
-	border: 1px solid #f2f2f2;
-}
-.recherche i {
-	padding: 10px;
-	padding-left: 10px;
-	text-align: center;
+	display: flex;
+	flex-flow: wrap row;
+	width: auto;
+	margin: 0px;
 }
 
-.recherche input[type='text'] {
+form div {
+	margin: 0px;
+}
+
+form div button {
+	color: white;
+	background-color: #0065fc;
 	margin: 0px;
 	border: none;
-	border: 2px #f2f2f2 solid;
-	padding: 10px;
+	font-size: 16px;
 }
 
-.recherche input[type='submit'] {
+.i {
+	padding: 10px;
+	border-radius: 15px 0px 0px 15px;
+}
+
+.text {
+	padding: 1px 0px 0px 0px;
+}
+
+.gris {
+	background: #f2f2f2;
+}
+
+.bleu {
 	background: #0065fc;
-	border: #0065fc 2px solid;
-	border-radius: 0px 15px 15px 0px;
-	color: white;
 	padding: 10px;
+	border-radius: 0px 15px 15px 0px;
 }
 
-.recherche input[type='submit']:hover {
-	border: 2px solid #deebff;
+input[type='text'] {
+	margin: 0px;
+	padding: 10px 0px 10px 5px;
+	border: none;
+	font-size: 16px;
 }
 
+.smart {
+	display: none;
+}
 /* Filtres recherche */
 
 .filtres h3 {
@@ -184,8 +199,7 @@ form {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0% 2% 1% 2%;
-	border: 2px #f2f2f2 solid;
-	border-left: none;
+	border: none;
 	background: white;
 	align-items: center;
 	padding: 0px;
@@ -200,7 +214,9 @@ form {
 
 .filtres i {
 	background: #deebff;
+	display: block;
 	width: 15px;
+	height: 15px;
 	padding: 15px;
 	border-radius: 30px;
 	color: #0065fc;
@@ -245,6 +261,16 @@ i.fa-info {
 	justify-content: space-between;
 }
 
+#content a {
+	margin: 1% 0% 2% 0%;
+}
+
+#content img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 section {
 	background: #f2f2f2;
 	border-radius: 30px;
@@ -273,13 +299,13 @@ section .section_head {
 
 #activites {
 	background: none;
-	width: 100%;
+	width: 98%;
 }
 
 #fav {
 	align-items: center;
 	width: 28%;
-	margin-right: 2%;
+	margin-left: 2%;
 }
 
 section button {
@@ -302,28 +328,17 @@ article {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	background: white;
+	width: 100%;
 	border: 5px white solid;
 	box-shadow: 5px 5px 5px gainsboro;
 	border-radius: 30px;
 	overflow: hidden;
-	position: relative;
-	margin: 1% 0% 2% 0%;
-}
-
-article img {
-	position: absolute;
-	top: 0px;
-	width: 100%;
 }
 
 .descr {
-	position: absolute;
 	background: white;
-	width: 96%;
 	display: flex;
 	flex-flow: column wrap;
-	padding: 1% 1% 0% 3%;
 }
 
 .descr h3,
@@ -352,45 +367,44 @@ article img {
 
 /*Section Hébergement */
 
-#hebergement article {
+#hebergement a {
 	width: 30%;
-}
-
-#hebergement button {
-	width: 100%;
-}
-
-#hebergement article {
 	height: 230px;
 }
 
-#hebergement article img {
-	height: 70%;
+#hebergement .img {
+	width: 100%;
+	height: 150px;
+	overflow: hidden;
 }
 
-#hebergement article .descr {
+#hebergement .descr {
+	width: 99%;
 	height: 70px;
-	top: 146px;
+	padding: 5px;
 }
 
 /*Section Favoris */
 
-#fav article {
+#fav a {
 	width: 97%;
-	height: 150px;
-	flex-flow: wrap row;
 }
 
-#fav article img {
+#fav article {
+	width: 100%;
 	height: 150px;
-	width: 150px;
+	flex-flow: wrap;
+	align-items: stretch;
 }
 
-#fav article .descr {
-	width: auto;
-	height: 80%;
-	left: 150px;
-	padding: 15px 5px 0px 5px;
+#fav .img {
+	width: 40%;
+	height: 150px;
+}
+
+#fav .descr {
+	width: 53%;
+	padding: 2% 5% 5% 2%;
 }
 
 /* Section activités */
@@ -399,50 +413,60 @@ article img {
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: space-between;
-	height: 400px;
+	height: 450px;
 	width: 100%;
 }
 
+#act a {
+	width: 22.5%;
+	margin: 0% 1% 0% 1%;
+}
+
 #act article {
-	width: 24%;
+	width: 100%;
 	border: none;
 }
 
-#act article .descr {
+#act .img {
+	width: 100%;
+}
+
+#act .descr {
+	width: 97%;
 	height: 50px;
-	bottom: 0px;
+	padding: 3%;
 }
 
 .act_full {
-	height: 98%;
+	height: 450px;
 }
 
-.act_2_3 {
-	height: 50%;
-}
-
-.act_1_3 {
-	height: 30%;
+.act_full .img {
+	height: 380px;
 }
 
 .act_half {
-	height: 40%;
+	height: 215px;
 }
 
-.act_full img {
-	height: 90%;
+.act_half .img {
+	height: 165px;
 }
 
-.act_2_3 img {
-	height: 80%;
+.act_1_3 {
+	height: 140px;
 }
 
-.act_1_3 img {
-	height: 75%;
+.act_1_3 .img {
+	height: 90px;
 }
 
-.act_half img {
-	height: 80%;
+.act_2_3 {
+	height: 290px;
+}
+
+.act_2_3 .img {
+	height: 240px;
 }
 
 /**FOOTER**/
@@ -505,42 +529,53 @@ footer {
 
 	/* Favoris */
 
-	#fav article {
+	#fav a {
 		margin: 5px 0px 5px 0px;
 		flex-flow: wrap column;
-		height: 200px;
+		width: 98%;
 	}
 
-	#fav article img {
+	#fav article {
+		width: 98%;
+		height: 240px;
+	}
+
+	#fav .img {
 		width: 100%;
-		height: auto;
+		height: 130px;
 		max-height: 80%;
 	}
 
-	#fav article .descr {
+	#fav .descr {
 		width: 100%;
-		left: 0px;
-		height: auto;
-		bottom: 10px;
+		height: 90px;
 	}
 
 	/* Activités */
 
 	#act {
-		height: 700px;
-		align-content: space-around;
+		height: 760px;
 	}
 
-	#act article {
+	#act a {
 		width: 98%;
-		height: 14%;
+	}
+
+	.act_full,
+	.act_half,
+	.act_1_3,
+	.act_2_3 {
+		width: 100%;
+		height: 110px;
+	}
+
+	#act .img {
+		width: 100%;
+		height: 70%;
 	}
 
 	#act article .descr {
 		width: 100%;
-		left: 0px;
-		height: 25%;
-		bottom: 8px;
 	}
 }
 
@@ -554,12 +589,12 @@ footer {
 	/** Propriétés Header **/
 	/* Ordre bloc de navigation */
 
-	header div:first-child {
+	.nav div:first-child {
 		order: -2;
 		width: 70%;
 	}
 
-	header div:nth-child(3) {
+	.nav div:nth-child(3) {
 		width: 30%;
 		text-align: center;
 		order: -1;
@@ -596,8 +631,23 @@ footer {
 
 	/* Barre de recherche */
 
-	.recherche {
-		justify-content: center;
+	form {
+		position: relative;
+		width: 100%;
+	}
+
+	.bleu {
+		position: absolute;
+		top: 0px;
+		border-radius: 15px;
+	}
+
+	.smart {
+		display: inline;
+	}
+
+	.normal {
+		display: none;
 	}
 
 	/** Contenu **/
@@ -620,6 +670,7 @@ footer {
 
 	#fav {
 		width: 98%;
+		margin-left: 0%;
 	}
 
 	#hebergement {
@@ -633,18 +684,36 @@ footer {
 	}
 
 	/* Propriétés des articles */
-
+	#hebergement a {
+		width: 100%;
+	}
 	#fav article {
-		width: 95%;
+		width: 98%;
 	}
 
 	#hebergement article {
-		width: 96%;
+		width: 98%;
+		margin: 0%;
 	}
 
-	#act article {
-		height: 15%;
-		width: 98%;
+	#act a {
+		width: 100%;
+		margin: 5px 0px 5px 0px;
+	}
+	.act_full,
+	.act_half,
+	.act_1_3,
+	.act_2_3 {
+		height: 200px;
+		width: 100%;
+	}
+
+	#act .img {
+		height: 150px;
+	}
+
+	#act .descr {
+		height: 50px;
 	}
 
 	/** Footer **/
