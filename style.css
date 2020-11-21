@@ -143,6 +143,7 @@ form {
 	display: flex;
 	flex-flow: wrap row;
 	width: auto;
+	height: 58px;
 	margin: 0px;
 }
 
@@ -155,16 +156,17 @@ form div button {
 	background-color: #0065fc;
 	margin: 0px;
 	border: none;
-	font-size: 16px;
+	padding: 5px;
+	font-size: 24px;
 }
 
 .i {
-	padding: 10px;
+	padding: 20px 20px 20px 20px;
 	border-radius: 15px 0px 0px 15px;
 }
 
 .text {
-	padding: 1px 0px 0px 0px;
+	padding: 1px 0px 1px 0px;
 }
 
 .gris {
@@ -179,9 +181,10 @@ form div button {
 
 input[type='text'] {
 	margin: 0px;
+	height: 36px;
 	padding: 10px 0px 10px 5px;
 	border: none;
-	font-size: 16px;
+	font-size: 24px;
 }
 
 .smart {
@@ -191,6 +194,8 @@ input[type='text'] {
 
 .filtres h3 {
 	margin-right: 2%;
+	font-size: 18px;
+	font-weight: bold;
 }
 
 .filtres button {
@@ -198,7 +203,7 @@ input[type='text'] {
 	border-radius: 30px;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 0% 2% 1% 2%;
+	margin: 0% 2% 0% 2%;
 	border: none;
 	background: white;
 	align-items: center;
@@ -216,15 +221,16 @@ input[type='text'] {
 	background: #deebff;
 	display: block;
 	width: 15px;
-	height: 15px;
-	padding: 15px;
-	border-radius: 30px;
+	height: 20px;
+	padding: 20px;
+	border-radius: 50%;
 	color: #0065fc;
 }
 
 .filtres span {
 	display: inline-block;
 	padding: 0px 10px 0px 5px;
+	font-size: 18px;
 	font-weight: bold;
 	text-transform: capitalize;
 	text-align: left;
@@ -587,24 +593,17 @@ footer {
 	}
 
 	/** Propriétés Header **/
-	/* Ordre bloc de navigation */
-
-	.nav div:first-child {
-		order: -2;
-		width: 70%;
-	}
-
-	.nav div:nth-child(3) {
-		width: 30%;
-		text-align: center;
-		order: -1;
-	}
 
 	/* Propriétés des blocs de navigation*/
 
 	header a:hover {
 		color: #0065fc;
 		border-top: 5px #0065fc solid;
+	}
+
+	.head_40 {
+		order: -2;
+		width: 70%;
 	}
 
 	.head_50 {
@@ -622,31 +621,34 @@ footer {
 		border-bottom: 5px #0065fc solid;
 	}
 
-	.head_20 {
-		display: flex;
+	.head_25 {
+		width: 30%;
 		text-align: center;
-		justify-content: space-around;
-		width: 20%;
+		order: -1;
 	}
 
 	/* Barre de recherche */
-
-	form {
-		position: relative;
+	.recherche{
 		width: 100%;
+		justify-content: center;
 	}
 
-	.bleu {
-		position: absolute;
-		top: 0px;
-		border-radius: 15px;
+	form{
+		position: relative;
 	}
-
-	.smart {
+	
+	.smart{
 		display: inline;
 	}
 
-	.normal {
+	.bleu{
+		position: absolute;
+		right: 0px;
+		height: 38px;
+		border-radius: 15px 15px 15px 15px;
+	}
+
+	.normal{
 		display: none;
 	}
 
